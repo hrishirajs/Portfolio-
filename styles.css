@@ -1,0 +1,260 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    background: linear-gradient(135deg, #d5b3ff, #6a0dad); /* Gradient with purple shades */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #6a0dad; /* Darker purple for the header */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* White text on header */
+    font-size: 18px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: #d5b3ff; /* Light purple for active and hover states */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3e9ff; /* Light purple shade for hero section background */
+    padding: 80px 0;
+    border-bottom: 3px solid #6a0dad; /* Add a purple border under the hero */
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    color: #6a0dad; /* Darker purple for headings */
+}
+
+.contact-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-image img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image */
+}
+
+.highlight {
+    color: #6a0dad; /* Purple highlight for name */
+}
+
+/* About, Projects, and Contact Sections */
+section {
+    padding: 60px 40px;
+    background-color: white;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px; /* Add slight rounding to sections */
+}
+
+section h2 {
+    font-size: 36px;
+    color: #6a0dad; /* Purple for section headings */
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+    color: #333;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f3e9ff; /* Light purple input fields */
+}
+
+#contact-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #5b009d; /* Darker purple on hover */
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #6a0dad;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #5b009d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6a0dad;
+    color: white;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+
+/* Mobile First */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* Typing Animation */
+#hero-text, #sub-text {
+    white-space: nowrap;
+    overflow: hidden; /* Ensures the text stays within its bounds while animating */
+    border-right: 2px solid #6a0dad; /* Simulate cursor */
+    font-size: 48px;
+    color: #333;
+    width: fit-content;
+}
+
+#sub-text {
+    font-size: 32px;
+    color: #6a0dad;
+    border-right: none; /* No cursor for the sub-text */
+}
+
+.typing-cursor {
+    animation: blink 0.75s step-end infinite; /* Simulates cursor blink */
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
